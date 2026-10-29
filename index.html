@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#090909">
+    <meta name="description" content="Website resmi Aswa Sura Renjana, grup seni tradisional jaran kepang dari Temanggung, Jawa Tengah.">
+
+    <title>Aswa Sura Renjana | Seni Budaya Temanggung</title>
+    <link rel="icon" type="image/png" href="assets/logo-asr.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Ikon media sosial diletakkan tepat di bawah tombol Jelajahi Kami */
+        .hero-socials {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 13px;
+            margin: 20px 0 0;
+        }
+        .hero-socials a {
+            width: 44px;
+            height: 44px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(215, 181, 109, .55);
+            border-radius: 50%;
+            color: #d7b56d;
+            background: rgba(12, 12, 12, .62);
+            box-shadow: 0 5px 18px rgba(0, 0, 0, .18);
+            transition: transform .25s ease, background .25s ease, color .25s ease, border-color .25s ease;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .hero-socials a svg {
+            display: block;
+            width: 21px;
+            height: 21px;
+            fill: currentColor;
+        }
+        .hero-socials a:hover,
+        .hero-socials a:focus-visible {
+            color: #111;
+            background: #d7b56d;
+            border-color: #d7b56d;
+            transform: translateY(-3px);
+            outline: none;
+        }
+        .hero-socials a:active { transform: scale(.95); }
+        @media (max-width: 600px) {
+            .hero-content { width: 100%; }
+            .hero-buttons {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+            .hero-buttons .btn { max-width: 100%; }
+            .hero-socials { gap: 12px; margin-top: 18px; }
+            .hero-socials a { width: 42px; height: 42px; }
+            .hero-socials a svg { width: 20px; height: 20px; }
+        }
+        @media (max-width: 360px) {
+            .hero-socials { gap: 9px; }
+            .hero-socials a { width: 39px; height: 39px; }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- LOADING SCREEN -->
+    <div class="loader" id="loader">
+        <img class="loader-logo" src="assets/logo-asr.png" alt="Logo Aswa Sura Renjana">
+        <div class="loader-line"></div>
+        <p>ASWA SURA RENJANA</p>
+    </div>
+
+    <!-- NAVBAR -->
+    <header class="navbar" id="navbar">
+        <a href="#home" class="brand">
+            <img class="brand-symbol" src="assets/logo-asr.png" alt="Logo Aswa Sura Renjana">
+            <div class="brand-text">
+                <strong>ASWA SURA</strong>
+                <span>RENJANA</span>
+            </div>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle"
+                aria-label="Buka menu navigasi"
+                aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="nav-menu" id="navMenu">
+            <a href="#home" class="nav-link active">Beranda</a>
+            <a href="#kegiatan" class="nav-link">Kegiatan</a>
+            <a href="#galeri" class="nav-link">Album Pentas</a>
+            <a href="#kontak" class="nav-link nav-contact">Hubungi Kami ↗</a>
+        </nav>
+    </header>
+
+
+    <!-- HERO -->
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="hero-background"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-pattern"></div>
+
+            <div class="hero-content reveal">
+
+                <div class="eyebrow">
+                    <span class="eyebrow-line"></span>
+                    SENI • TRADISI • KEBANGGAAN
+                    <span class="eyebrow-line"></span>
+                </div>
+
+                <h1>
+                    ASWA SURA
+                    <span>RENJANA</span>
+                </h1>
+
+                <p class="hero-location">
+                    ✦ TEMANGGUNG, JAWA TENGAH ✦
+                </p>
+
+                <p class="hero-description">
+                    Menghidupkan warisan budaya melalui seni,
+                    menjaga tradisi untuk generasi mendatang.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#kegiatan" class="btn btn-primary">
+                        Jelajahi Kegiatan <span>↗</span>
+                    </a>
+
+                   <a href="#galeri" class="btn btn-outline" id="lihatAlbumPentas">
+                        Lihat Album Pentas
+                    </a>
+                    </a>
+                </div>
+
+                <div class="hero-socials" aria-label="Media sosial Aswa Sura Renjana">
+                    <a href="#" data-social="whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="WhatsApp">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.52 3.48A11.8 11.8 0 0 0 12.1 0C5.55 0 .22 5.33.22 11.88c0 2.1.55 4.15 1.6 5.96L.12 24l6.31-1.65a11.9 11.9 0 0 0 5.67 1.44h.01c6.55 0 11.88-5.33 11.88-11.88a11.8 11.8 0 0 0-3.47-8.43ZM12.1 21.77a9.86 9.86 0 0 1-5.02-1.37l-.36-.21-3.75.98 1-3.65-.24-.38a9.83 9.83 0 1 1 8.37 4.63Zm5.4-7.37c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.77-1.67-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.21 5.08 4.5.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35Z"/></svg>
+                    </a>
+                    <a href="#" data-social="instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm0 2A3.8 3.8 0 0 0 4 7.8v8.4A3.8 3.8 0 0 0 7.8 20h8.4a3.8 3.8 0 0 0 3.8-3.8V7.8A3.8 3.8 0 0 0 16.2 4H7.8ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm5.25-3.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5Z"/></svg>
+                    </a>
+                    <a href="#" data-social="tiktok" target="_blank" rel="noopener noreferrer" aria-label="TikTok" title="TikTok">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.1V2h-3.42v13.67a2.9 2.9 0 0 1-2.9 2.75 2.9 2.9 0 1 1 0-5.8c.3 0 .6.05.87.14V9.27a6.3 6.3 0 0 0-.87-.06 6.32 6.32 0 1 0 6.32 6.32V8.56a8.2 8.2 0 0 0 4.8 1.54V6.7c-.35 0-.7-.01-1.03-.01Z"/></svg>
+                    </a>
+                    <a href="#" data-social="youtube" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="YouTube">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.12C19.55 3.57 12 3.57 12 3.57s-7.55 0-9.4.51A3 3 0 0 0 .5 6.2 31.2 31.2 0 0 0 0 12a31.2 31.2 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.12c1.85.51 9.4.51 9.4.51s7.55 0 9.4-.51a3 3 0 0 0 2.1-2.12A31.2 31.2 0 0 0 24 12a31.2 31.2 0 0 0-.5-5.8ZM9.55 15.57V8.43L15.82 12l-6.27 3.57Z"/></svg>
+                    </a>
+                </div>
+
+                <div class="hero-bottom">
+                    <span>EST.2025</span>
+                    <span class="hero-bottom-line"></span>
+                </div>
+
+            </div>
+
+
+            <a href="#kegiatan" class="scroll-indicator" aria-label="Gulir untuk menjelajahi kegiatan">
+                <span class="scroll-mouse" aria-hidden="true"></span>
+                <span>SCROLL UNTUK MENJELAJAHI</span>
+            </a>
+
+            <div class="hero-number">01 / 04</div>
+
+        </section>
+
+        <!-- KEGIATAN -->
+        <section class="section activities-section" id="kegiatan">
+
+            <div class="section-heading reveal">
+                <span class="section-label">02 — AKTIVITAS</span>
+
+                <h2>
+                    Cerita di Atas <span>Panggung.</span>
+                </h2>
+
+                <p>
+                    Setiap gerakan, latihan, dan pertunjukan
+                    menjadi bagian dari perjalanan kami.
+                </p>
+            </div>
+
+            <div class="activities-grid">
+
+                <article class="activity-card reveal">
+                    <div class="activity-video-wrap">
+                        <span class="activity-tag">PENTAS WAROK</span>
+                        <video class="activity-video" controls preload="metadata" playsinline
+                               poster="assets/video-warok-poster.jpg"
+                               aria-label="Video pentas Warok Aswa Sura Renjana">
+                            <source src="https://res.cloudinary.com/bt3we1ns/video/upload/v1793262754/video-warok.mp4" type="video/mp4">
+                            Browser sampeyan ora mendukung video HTML5.
+                        </video>
+                    </div>
+
+                    <div class="activity-info">
+                        <span class="activity-category"></span>
+                        <h3>Pentas Warok</h3>
+                        <p>
+                            Menampilkan kesenian tradisional
+                            dengan semangat dan kekompakan.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="activity-card reveal">
+                    <div class="activity-video-wrap">
+                        <span class="activity-tag">TOPENG IRENG</span>
+                        <video class="activity-video" controls preload="metadata" playsinline
+                               poster="assets/video-topeng-ireng-poster.jpg"
+                               aria-label="Video pentas Topeng Ireng Aswa Sura Renjana">
+                            <source src="https://res.cloudinary.com/bt3we1ns/video/upload/v1793262758/video-topeng-ireng.mp4" type="video/mp4">
+                            Browser sampeyan ora mendukung video HTML5.
+                        </video>
+                    </div>
+
+                    <div class="activity-info">
+                        <span class="activity-category"></span>
+                        <h3>Pentas topeng ireng</h3>
+                        <p>
+                            Menampilkan kesenian tradisional
+                            dengan semangat dan kekompakan.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+
+            <p class="content-note">
+                * Sedikit cuplikan kami.
+            </p>
+
+        </section>
+
+
+        <!-- GALLERY -->
+        <section class="section gallery-section" id="galeri">
+            <div class="gallery-heading reveal">
+                <div>
+                    <span class="section-label">03 — DOKUMENTASI</span>
+                    <h2>Album <span>Pentas.</span></h2>
+                </div>
+                <p>Kumpulan momen pentas Aswa Sura Renjana.</p>
+            </div>
+
+            <button class="album-card reveal" id="openPentasAlbum" type="button"
+                    aria-haspopup="dialog" aria-controls="pentasAlbumModal">
+                <span class="album-cover album-cover-empty">
+                    <span class="album-cover-icon">✦</span>
+                </span>
+                <span class="album-card-info">
+                    <span>
+                        <strong>ALBUM PENTAS</strong>
+                        <small>Dokumentasi pentas Aswa Sura Renjana</small>
+                    </span>
+                    <span class="album-open-label">BUKA ALBUM ↗</span>
+                </span>
+            </button>
+        </section>
+
+        <!-- ALBUM POP-UP: tetap di halaman utama, tidak pindah halaman -->
+        <div class="album-modal" id="pentasAlbumModal" role="dialog"
+             aria-modal="true" aria-labelledby="pentasAlbumTitle" aria-hidden="true">
+            <div class="album-modal-panel">
+                <div class="album-modal-header">
+                    <div>
+                        <span class="section-label">ASWA SURA RENJANA</span>
+                        <h2 id="pentasAlbumTitle">Album <span>Pentas.</span></h2>
+                        <p>Pilih foto kanggo ndelok luwih cetha.</p>
+                    </div>
+                    <button class="album-modal-close" id="closePentasAlbum"
+                            type="button" aria-label="Tutup album">×</button>
+                </div>
+
+                <div class="gallery-grid album-modal-grid" id="pentasPhotoGrid"> 
+                    <button class="gallery-item gallery-large reveal"
+                            data-image="assets/foto-1.jpeg"
+                            data-title="Dokumentasi Pentas 1"
+                            aria-label="Lihat foto dokumentasi pentas 1">
+                        <img src="assets/foto-1.jpeg" alt="Dokumentasi pentas 1" loading="lazy"
+                             onerror="this.style.display='none'">
+                        <div class="gallery-placeholder"><span>✦</span><strong>FOTO PENTAS</strong><small>foto-1.jpeg</small></div>
+                        <div class="gallery-overlay"><span>01 / 20</span><strong>Dokumentasi 1</strong><i>↗</i></div>
+                    </button> 
+                    <button class="gallery-item reveal"
+                            data-image="assets/foto-2.jpeg"
+                            data-title="Dokumentasi Pentas 2"
+                            aria-label="Lihat foto dokumentasi pentas 2">
+                        <img src="assets/foto-2.jpeg" alt="Dokumentasi pentas 2" loading="lazy"
+                             onerror="this.style.display='none'">
+                        <div class="gallery-placeholder"><span>✦</span><strong>FOTO PENTAS</strong><small>foto-2.jpeg</small></div>
+                        <div class="gallery-overlay"><span>02 / 20</span><strong>Dokumentasi 2</strong><i>↗</i></div>
+                    </button> 
+                    <button class="gallery-item reveal"
+                            data-image="assets/foto-3.jpeg"
+                            data-title="Dokumentasi Pentas 3"
+                            aria-label="Lihat foto dokumentasi pentas 3">
+                        <img src="assets/foto-3.jpeg" alt="Dokumentasi pentas 3" loading="lazy"
+                             onerror="this.style.display='none'">
+                        <div class="gallery-placeholder"><span>✦</span><strong>FOTO PENTAS</strong><small>foto-3.jpeg</small></div>
+                        <div class="gallery-overlay"><span>03 / 20</span><strong>Dokumentasi 3</strong><i>↗</i></div>
+                    </button> 
+                    <button class="gallery-item reveal"
+                            data-image="assets/foto-4.jpeg"
+                            data-title="Dokumentasi Pentas 4"
+                            aria-label="Lihat foto dokumentasi pentas 4">
+                        <img src="assets/foto-4.jpeg" alt="Dokumentasi pentas 4" loading="lazy"
+                             onerror="this.style.display='none'">
+                        <div class="gallery-placeholder"><span>✦</span><strong>FOTO PENTAS</strong><small>foto-4.jpeg</small></div>
+                        <div class="gallery-overlay"><span>04 / 20</span><strong>Dokumentasi 4</strong><i>↗</i></div>
+                    </button> 
+                    <button class="gallery-item reveal"
+                            data-image="assets/foto-5.jpeg"
+                            data-title="Dokumentasi Pentas 5"
+                            aria-label="Lihat foto dokumentasi pentas 5">
+                        <img src="assets/foto-5.jpeg" alt="Dokumentasi pentas 5" loading="lazy"
+                             onerror="this.style.display='none'">
+                        <div class="gallery-placeholder"><span>✦</span><strong>FOTO PENTAS</strong><small>foto-5.jpeg</small></div>
+                        <div class="gallery-overlay"><span>05 / 20</span><strong>Dokumentasi 5</strong><i>↗</i></div>
+                    </button> 
+                    <button class="gallery-item reveal"
+                            data-image="assets/foto-6.jpeg"
+                            data-title="Dokumentasi Pentas 6"
+                            aria-label="Lihat foto dokumentasi pentas 6">
+                        <img src="assets/foto-6.jpeg" alt="Dokumentasi pentas 6" loading="lazy"
+                             onerror="this.style.display='none'">
+                        <div class="gallery-placeholder"><span>✦</span><strong>FOTO PENTAS</strong><small>foto-6.jpeg</small></div>
+                        <div class="gallery-overlay"><span>06 / 20</span><strong>Dokumentasi 6</strong><i>↗</i></div>
+                    </button> 
+                    <button class="gallery-item reveal"
+                            data-image="assets/foto-7.jpeg"
+                            data-title="Dokumentasi Pentas 7"
+                            aria-label="Lihat foto dokumentasi pentas 7">
+                        <img src="assets/foto-7.jpeg" alt="Dokumentasi pentas 7" loading="lazy"
+                             onerror="this.style.display='none'">
+                        <div class="gallery-placeholder"><span>✦</span><strong>FOTO PENTAS</strong><small>foto-7.jpeg</small></div>
+                        <div class="gallery-overlay"><span>07 / 20</span><strong>Dokumentasi 7</strong><i>↗</i></div>
+                    </button> 
+                    <button class="gallery-item reveal"
+                            data-image="assets/foto-8.jpeg"
+                            data-title="Dokumentasi Pentas 8"
+                            aria-label="Lihat foto dokumentasi pentas 8">
+                        <img src="assets/foto-8.jpeg" alt="Dokumentasi pentas 8" loading="lazy"
+                             onerror="this.style.display='none'">
+                        <div class="gallery-placeholder"><span>✦</span><strong>FOTO PENTAS</strong><small>foto-8.jpeg</small></div>
+                        <div class="gallery-overlay"><span>08 / 20</span><strong>Dokumentasi 8</strong><i>↗</i></div>
+                    </button> 
+                    <button class="gallery-item reveal"
+                            data-image="assets/foto-9.jpeg"
+                            data-title="Dokumentasi Pentas 9"
+                            aria-label="Lihat foto dokumentasi pentas 9">
+                        <img src="assets/foto-9.jpeg" alt="Dokumentasi pentas 9" loading="lazy"
+                             onerror="this.style.display='none'">
+                        <div class="gallery-placeholder"><span>✦</span><strong>FOTO PENTAS</strong><small>foto-9.jpeg</small></div>
+                        <div class="gallery-overlay"><span>09 / 20</span><strong>Dokumentasi 9</strong><i>↗</i></div>
+                    </button> 
+                    <button class="gallery-item reveal"
+                            data-image="assets/foto-10.jpeg"
+                            data-title="Dokumentasi Pentas 10"
+                            aria-label="Lihat foto dokumentasi pentas 10">
+                        <img src="assets/foto-10.jpeg" alt="Dokumentasi pentas 10" loading="lazy"
+                             onerror="this.style.display='none'">
+                        <div class="gallery-placeholder"><span>✦</span><strong>FOTO PENTAS</strong><small>foto-10.jpeg</small></div>
+                        <div class="gallery-overlay"><span>10 / 20</span><strong>Dokumentasi 10</strong><i>↗</i></div>
+                    </button> 
+                    <button class="gallery-item reveal"
+                            data-image="assets/foto-11.jpeg"
+                            data-title="Dokumentasi Pentas 11"
+                            aria-label="Lihat foto dokumentasi pentas 11">
+                        <img src="assets/foto-11.jpeg" alt="Dokumentasi pentas 11" loading="lazy"
+                             onerror="this.style.display='none'">
+                        <div class="gallery-placeholder"><span>✦</span><strong>FOTO PENTAS</strong><small>foto-11.jpeg</small></div>
+                        <div class="gallery-overlay"><span>11 / 20</span><strong>Dokumentasi 11</strong><i>↗</i></div>
+                    </button> 
+                    <button class="gallery-item reveal"
+                            data-image="assets/foto-12.jpeg"
+                            data-title="Dokumentasi Pentas 12"
+                            aria-label="Lihat foto dokumentasi pentas 12">
+                        <img src="assets/foto-12.jpeg" alt="Dokumentasi pentas 12" loading="lazy"
+                             onerror="this.style.display='none'">
+                        <div class="gallery-placeholder"><span>✦</span><strong>FOTO PENTAS</strong><small>foto-12.jpeg</small></div>
+                        <div class="gallery-overlay"><span>12 / 20</span><strong>Dokumentasi 12</strong><i>↗</i></div>
+                    </button> 
+                    <button class="gallery-item reveal"
+                            data-image="assets/foto-13.jpeg"
+                            data-title="Dokumentasi Pentas 13"
+                            aria-label="Lihat foto dokumentasi pentas 13">
+                        <img src="assets/foto-13.jpeg" alt="Dokumentasi pentas 13" loading="lazy"
+                             onerror="this.style.display='none'">
+                        <div class="gallery-placeholder"><span>✦</span><strong>FOTO PENTAS</strong><small>foto-13.jpeg</small></div>
+                        <div class="gallery-overlay"><span>13 / 20</span><strong>Dokumentasi 13</strong><i>↗</i></div>
+                    </button> 
+                    <button class="gallery-item reveal"
+                            data-image="assets/foto-14.jpg"
+                            data-title="Dokumentasi Pentas 14"
+                            aria-label="Lihat foto dokumentasi pentas 14">
+                        <img src="assets/foto-14.jpg" alt="Dokumentasi pentas 14" loading="lazy"
+                             onerror="this.style.display='none'">
+                        <div class="gallery-placeholder"><span>✦</span><strong>FOTO PENTAS</strong><small>foto-14.jpg</small></div>
+                        <div class="gallery-overlay"><span>14 / 20</span><strong>Dokumentasi 14</strong><i>↗</i></div>
+                    </button> 
+                    <button class="gallery-item reveal"
+                            data-image="assets/foto-15.jpg"
+                            data-title="Dokumentasi Pentas 15"
+                            aria-label="Lihat foto dokumentasi pentas 15">
+                        <img src="assets/foto-15.jpg" alt="Dokumentasi pentas 15" loading="lazy"
+                             onerror="this.style.display='none'">
+                        <div class="gallery-placeholder"><span>✦</span><strong>FOTO PENTAS</strong><small>foto-15.jpg</small></div>
+                        <div class="gallery-overlay"><span>15 / 20</span><strong>Dokumentasi 15</strong><i>↗</i></div>
+                    </button> 
+                    <button class="gallery-item reveal"
+                            data-image="assets/foto-16.jpg"
+                            data-title="Dokumentasi Pentas 16"
+                            aria-label="Lihat foto dokumentasi pentas 16">
+                        <img src="assets/foto-16.jpg" alt="Dokumentasi pentas 16" loading="lazy"
+                             onerror="this.style.display='none'">
+                        <div class="gallery-placeholder"><span>✦</span><strong>FOTO PENTAS</strong><small>foto-16.jpg</small></div>
+                        <div class="gallery-overlay"><span>16 / 20</span><strong>Dokumentasi 16</strong><i>↗</i></div>
+                    </button> 
+                    <button class="gallery-item reveal"
+                            data-image="assets/foto-17.jpg"
+                            data-title="Dokumentasi Pentas 17"
+                            aria-label="Lihat foto dokumentasi pentas 17">
+                        <img src="assets/foto-17.jpg" alt="Dokumentasi pentas 17" loading="lazy"
+                             onerror="this.style.display='none'">
+                        <div class="gallery-placeholder"><span>✦</span><strong>FOTO PENTAS</strong><small>foto-17.jpg</small></div>
+                        <div class="gallery-overlay"><span>17 / 20</span><strong>Dokumentasi 17</strong><i>↗</i></div>
+                    </button> 
+                    <button class="gallery-item reveal"
+                            data-image="assets/foto-18.jpg"
+                            data-title="Dokumentasi Pentas 18"
+                            aria-label="Lihat foto dokumentasi pentas 18">
+                        <img src="assets/foto-18.jpg" alt="Dokumentasi pentas 18" loading="lazy"
+                             onerror="this.style.display='none'">
+                        <div class="gallery-placeholder"><span>✦</span><strong>FOTO PENTAS</strong><small>foto-18.jpg</small></div>
+                        <div class="gallery-overlay"><span>18 / 20</span><strong>Dokumentasi 18</strong><i>↗</i></div>
+                    </button> 
+                    <button class="gallery-item reveal"
+                            data-image="assets/foto-19.jpg"
+                            data-title="Dokumentasi Pentas 19"
+                            aria-label="Lihat foto dokumentasi pentas 19">
+                        <img src="assets/foto-19.jpg" alt="Dokumentasi pentas 19" loading="lazy"
+                             onerror="this.style.display='none'">
+                        <div class="gallery-placeholder"><span>✦</span><strong>FOTO PENTAS</strong><small>foto-19.jpg</small></div>
+                        <div class="gallery-overlay"><span>19 / 20</span><strong>Dokumentasi 19</strong><i>↗</i></div>
+                    </button> 
+                    <button class="gallery-item gallery-wide reveal"
+                            data-image="assets/foto-20.jpg"
+                            data-title="Dokumentasi Pentas 20"
+                            aria-label="Lihat foto dokumentasi pentas 20">
+                        <img src="assets/foto-20.jpg" alt="Dokumentasi pentas 20" loading="lazy"
+                             onerror="this.style.display='none'">
+                        <div class="gallery-placeholder"><span>✦</span><strong>FOTO PENTAS</strong><small>foto-20.jpg</small></div>
+                        <div class="gallery-overlay"><span>20 / 20</span><strong>Dokumentasi 20</strong><i>↗</i></div>
+                    </button>
+                </div>
+
+                <div class="gallery-footer">
+                    <span>ALBUM DOKUMENTASI PENTAS.</span>
+                    <span>ASWA SURA RENJANA ✦</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tautan media sosial dipindahkan ke bagian atas. -->
+
+
+        <!-- CONTACT -->
+        <section class="contact-section" id="kontak">
+
+            <div class="contact-background"></div>
+
+            <div class="contact-content reveal">
+
+                <span class="section-label">04 — HUBUNGI KAMI</span>
+
+                <h2>
+                    Punya Acara?<br>
+                    <span>Mari Berkolaborasi.</span>
+                </h2>
+
+                <p>
+                    Ingin mengundang Aswa Sura Renjana untuk
+                    memeriahkan acara atau ingin mengetahui
+                    informasi lebih lanjut? Hubungi kami.
+                </p>
+
+                <a href="#" class="btn btn-primary"
+                   id="contactButton">
+                    Hubungi via WhatsApp <span>↗</span>
+                </a>
+
+                <small>
+                    ASWA SURA RENJANA · TEMANGGUNG
+                </small>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <a href="#home" class="brand footer-brand">
+            <img class="brand-symbol" src="assets/logo-asr.png" alt="Logo Aswa Sura Renjana">
+            <div class="brand-text">
+                <strong>ASWA SURA</strong>
+                <span>RENJANA</span>
+            </div>
+        </a>
+
+        <p>
+            Melestarikan tradisi, menjaga identitas,
+            menghidupkan budaya.
+        </p>
+
+        <div class="footer-bottom">
+            <span>© <span id="year"></span> ASWA SURA RENJANA</span>
+            <a href="#home">KEMBALI KE ATAS ↑</a>
+        </div>
+
+        <div class="creator-credit">Made by <strong>Vega R</strong> ✦</div>
+
+    </footer>
+
+
+    <!-- FLOATING MUSIC BUTTON -->
+    <button class="music-button" id="musicButton"
+            aria-label="Putar musik latar"
+            title="Musik latar">
+
+        <span class="music-icon">♫</span>
+        <span class="music-label">MUSIK...</span>
+
+    </button>
+
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox"
+         aria-hidden="true">
+
+        <button class="lightbox-close"
+                id="lightboxClose"
+                aria-label="Tutup foto">×</button>
+
+        <button class="lightbox-prev"
+                id="lightboxPrev"
+                aria-label="Foto sebelumnya">‹</button>
+
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightboxImage">
+            <p id="lightboxCaption"></p>
+        </div>
+
+        <button class="lightbox-next"
+                id="lightboxNext"
+                aria-label="Foto berikutnya">›</button>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
